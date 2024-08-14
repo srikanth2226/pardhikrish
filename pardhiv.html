@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Portfolio</title>
+    
+<style>
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: skyblue;
+}
+
+header {
+  background-color: pink;
+  color: lightblack;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+header p {
+  margin: 10px 0 0;
+  font-size: 1.2em;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  border:1px solid black;
+  justify-content: center;
+  background-color: lightgreen;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 15px;
+  display: block;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.project {
+  background-color: gray;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  flex: 1 1 calc(50% - 40px);
+}
+
+
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1em;
+}
+</style>
+<script>
+document.querySelectorAll('nav ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+</script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>M Pardhiv krishna</h1>
+            <p>Computer Science Student</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certification">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a computer science student with expertise in full stack development, Java, and networking. Passionate about creating efficient and user-friendly web applications.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <div class="project">
+                <h3>E-commerce Website</h3>
+                <p>class="project-description">Developed a fully functional e-commerce website using [technologies]. Implemented features such as user authentication, product catalog, and shopping cart functionality.</p>
+            </div>
+            <!-- Add more projects as needed -->
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li>Full Stack Development</li>
+                <li>Java</li>
+                <li>Networking</li>
+                <li>HTML/CSS/JavaScript</li>
+                <li>Database Management</li>
+            <!-- Add more skills as needed -->
+        </ul>
+    </section>
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <ul>
+            <li>Cambridge Proficiency Certificate</li>
+            <li>NPTEL E-commerce Certificate</li>
+            <li>Acemgrade Web Development Certificate</li>
+            <li>Cisco Networking Certificate</li>
+        </ul>
+      </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>If you'd like to get in touch, please reach out via email at <a href="pardhivkrishna2004@gmail.com">pardhivkrishna2004@gmail.com</a> or connect with me on LinkedIn.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+    
+</body>
+</html>
